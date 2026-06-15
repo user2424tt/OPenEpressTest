@@ -1,0 +1,515 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.head{
+    width: 70%;
+    height: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left:0;
+}
+button{
+    width:10vw;
+    height:7vh;
+    border: none;              
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: rgb(72, 29, 189);
+    border: solid gainsboro 2px;         
+    border-radius: 8px;       
+    color: rgb(220, 220, 220);              
+    cursor: pointer;          
+    transition: background-color 0.3s ease; 
+}
+li{
+    color: rgb(78, 78, 78);
+    font-size: 12px;
+    margin: 10px;
+}
+
+input{
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown_background{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#dropdown_background_fix{
+    right: 15vw;
+}
+#dropdown_fix{
+    right: 15vw;
+}
+.dropdown {
+    width: 15vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+
+  .dropdown>#toggle {
+    display: none;
+  }
+
+    .dropdown_button {
+    width:12vw;
+    height:10vh;
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(72, 29, 189); 
+    border: none;              
+    margin: 30px auto 40px auto;
+    border: solid gainsboro 2px;          
+    border-radius: 8px;             
+    color:whitesmoke;              
+    cursor: pointer;          
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    position: absolute; 
+    background-color: rgb(72, 29, 189); 
+    width: 100%; 
+    z-index: 1; 
+  }
+
+  .dropdown #toggle:checked ~ ul {
+    max-height: 750px; 
+  }
+
+  ul li {
+
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dropdown ul li:last-child{
+    border-bottom: none;
+  }
+
+    .dropdown ul li #toggle {
+        display: none; 
+    }
+
+    .dropdown>ul>li>label{
+        display: flex; 
+        align-items: center;
+        cursor: pointer;
+        width: 100%; 
+    }
+
+.choise {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:whitesmoke;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    margin: 10px 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgb(72, 29, 189);
+    border: 2px solid gainsboro;
+    border-radius: 2px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    border: 2px solid darkgrey;
+    color: darkgrey;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 4px;
+
+    width: 4px;
+    height: 8px;
+    border: solid gainsboro;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*  */
+
+
+.dropdown_background2{
+    position: absolute;
+    width: 15vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#dropdown_background_fix2{
+    right: 15vw;
+}
+#dropdown_fix2{
+    right: 15vw;
+}
+.dropdown2 {
+    width: 15vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+
+  .dropdown2>#toggle2 {
+    display: none;
+  }
+
+    .dropdown_button2 {
+    width:12vw;
+    height:10vh;
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(72, 29, 189); 
+    border: none;              
+    margin: 30px auto 40px auto;
+    border: solid gainsboro 2px;          
+    border-radius: 8px;             
+             color:whitesmoke;
+    cursor: pointer;          
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    position: absolute; 
+    background-color: rgb(72, 29, 189); 
+    width: 100%; 
+    z-index: 1; 
+  }
+
+  .dropdown2 #toggle2:checked ~ ul {
+    max-height: 750px; 
+  }
+
+  ul li {
+
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dropdown2 ul li:last-child{
+    border-bottom: none;
+  }
+
+    .dropdown2 ul li #toggle2 {
+        display: none; 
+    }
+
+    .dropdown2>ul>li>label{
+        display: flex; 
+        align-items: center;
+        cursor: pointer;
+        width: 100%; 
+    }
+
+.choise2 {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container2 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:whitesmoke;
+}
+
+.checkmark2 {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgb(72, 29, 189);
+    border: 2px solid gainsboro;
+    border-radius: 2px;
+}
+
+.checkbox-container2:hover input ~ .checkmark2 {
+    border: 2px solid darkgrey;
+    color: darkgrey;
+}
+
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container2 input:checked ~ .checkmark2:after {
+    display: block;
+}
+
+.checkbox-container2 .checkmark2:after {
+    left: 4px;
+
+    width: 4px;
+    height: 8px;
+    border: solid gainsboro;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*  */
+
+.input_search{
+    height:5vh;
+    width: 50vw;
+    margin-top: 0px;
+    border-radius: 30px;
+    outline: none;
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: gainsboro; 
+}
+.button_search{
+    width:12vw;
+    height:8vh;
+    background-color: rgb(72, 29, 189); 
+    border: none;              
+    padding: 5px 10px; 
+    margin: 15px;
+    border: solid gainsboro 2px;      
+    border-radius: 8px;       
+    color: gainsboro;              
+    cursor: pointer;          
+}
+
+.dropdown_button:hover {
+    border: solid darkgrey 2px; 
+    color: darkgrey;
+}
+#toggle:hover {
+    border: solid darkgrey 2px;
+    color: darkgrey;    
+}
+button:hover {
+    border: solid darkgrey 2px;    
+    color: darkgrey; 
+}
+.button_search:hover{
+    border: solid darkgrey 2px;  
+    color: darkgrey;
+}
+.checkbox-container:hover{
+    color: darkgrey;
+}
+
+.content{
+    width:70%;
+    height:80%;
+    background-color: lightgrey;
+    bottom: 0;
+    left: 0;
+}
+.card_form_1{
+    width: 35vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.card_form_2{
+    width: 35vw;
+    height: 10vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+.card_form_3{
+    width: 35vw;
+    height: 60vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#card{
+    width: 35vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border: solid gainsboro 2px;      
+    border-radius: 16px;
+    background-color: rgb(72, 29, 189); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#card>form>div{
+    width: 30vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
+#card>form>div>p{
+    display: inline-block;
+    white-space: nowrap;
+    /* color: rgb(78, 78, 78); */
+    color: gainsboro;
+}
+#card>#testForm>h2{
+    font-size: 12px;
+    display: inline-block;
+    color: gainsboro; 
+}
+#card>form{
+    color: gainsboro;
+}
+#card>form>h1{
+    display: inline-block;
+    color: gainsboro; 
+}
+.input_login_password{
+
+    height: 5vh;
+    width: auto;
+    
+    border-radius: 30px;
+    outline: none;
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: gainsboro; 
+    flex: 1;
+}
+.button_login_registration{
+    width:20vw;
+    height:5vh;
+    background-color: rgb(72, 29, 189); 
+    border: none;              
+    padding: 5px 10px; 
+    margin: 15px;
+    border: solid gainsboro 2px;      
+    border-radius: 8px;       
+    color: gainsboro;              
+    cursor: pointer; 
+}
+
+.test_button{
+    width:8vw;
+    height:5vh;
+    border: none;              
+    padding: 5px 10px; 
+    margin: 30px;
+    background-color: #350ba8;
+    border: solid gainsboro 2px;         
+    border-radius: 8px;       
+    color: rgb(220, 220, 220);              
+    cursor: pointer;          
+    transition: background-color 0.3s ease;
+}
+.test_button2{
+    margin-left: 100px;
+}
+.absolute_fix{
+    position:absolute;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+}
+
+.checklist2 li {
+    color: white;
+}
